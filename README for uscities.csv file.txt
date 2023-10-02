@@ -1,5 +1,5 @@
 README for uscities.csv file
-A simple data file containing information about all U.S. cities, including 14 fields (listed below) and 30,844 rows (number of cities included). Note that there are repeat names of cities (such as Paris, Texas, Paris, Kentucky, Paris, Ohio, etc.). For geographic mapping, there a both county fips values as well and latitude and longitude values.  
+A simple data file containing information about all U.S. cities, including 14 fields (listed below) and 30,844 rows (number of cities included). Note that there are repeat names of cities (such as Paris, Texas, Paris, Kentucky, Paris, Ohio, etc.). For geographic mapping, there are both county fips values as well and latitude and longitude values.  
 
 Sources
 	https://simplemaps.com/data/us-cities
