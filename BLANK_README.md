@@ -24,7 +24,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/annieco/wid_climate_change_datathon">
-    <img src="climate_news_sentiment_app_photo.png" alt="Logo" width="80" height="80">
+    <img src="climate_news_sentiment_app_photo.png" alt="Logo" width="240" height="120">
   </a>
 
 <h3 align="center">Mapping Climate Change News Sentiment</h3>
