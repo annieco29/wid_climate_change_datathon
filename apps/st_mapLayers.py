@@ -5,7 +5,6 @@ import plotly.express as px
 import folium
 from streamlit_folium import folium_static
 import geopandas as gpd
-import plotly.express as px
 import base64
 from folium.plugins import MarkerCluster
 import branca
