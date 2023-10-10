@@ -76,6 +76,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<div align="center">
+  <a href="https://github.com/annieco/wid_climate_change_datathon">
+    <img src="climate_news_sentiment_app_photo.png" alt="Logo" width="480" height="240">
+
 [![Product Name Screen Shot][product-screenshot]](https://mappingclimatechangenewsdata.streamlit.app/)
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
