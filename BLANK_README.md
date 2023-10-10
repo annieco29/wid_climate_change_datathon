@@ -80,8 +80,10 @@
   <a href="https://github.com/annieco/wid_climate_change_datathon">
     <img src="climate_news_sentiment_app_photo.png" alt="Logo" width="480" height="240">
   </a>
-
+  
+<!--
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+-->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,7 +91,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Python][Next.js]][[Next-url](https://www.python.org/)]
+* [![Python][python.org]][[Python-url](https://www.python.org/)]
 * [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
