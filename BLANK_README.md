@@ -32,14 +32,12 @@
   <p align="center">
     The <a href="https://storymaps.arcgis.com/collections/87744e6b06c74e82916b9b11da218d28?item=1"f><strong>Climate Risk Viewer</strong></a> is a tool built by the Forest Service to spacially identify climate-related risks. Our Streamlit-based application is a new take that also maps climate risk by identifying climate change related news articles by geographic location. In the application, a heatmap shows the quantity of climate change related articles with a negative sentiment. This tool will allow organizations like the U.S. Forest Service to view climate-related disasters and vulnerabilities using real-time news data.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/annieco29/wid_climate_change_datathon"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="mappingclimatechangenewsdata.streamlit.app">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/annieco29/wid_climate_change_datathon/issues">Request Feature</a>
   </p>
 </div>
 
