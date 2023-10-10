@@ -77,7 +77,7 @@ def app():
     articles['state_name'] = articles['state_name'].str.upper()
 
     st.markdown('---')
-    st.header('Heat map of climate change news sentiment by US city')
+    st.header('Heat map of climate change news sentiment by US state')
 
     # reading in the polygon shapefile
     us_states = gpd.read_file(r"data/States_shapefile-shp/States_shapefile.shp")
