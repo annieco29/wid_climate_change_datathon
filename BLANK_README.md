@@ -18,35 +18,28 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
+<!--
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/annieco/wid_climate_change_datathon">
+    <img src="climate_news_sentiment_app_photo.png" alt="Logo" width="240" height="120">
   </a>
+-->
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Mapping Climate Change News Sentiment</h3>
 
   <p align="center">
-    project_description
+    This project was built by Annie, Thienthanh, and Sarah for the <a href="https://www.womenindata.org/datathon"><strong>WiD 2023 Datathon</strong></a>. The <a href="https://storymaps.arcgis.com/collections/87744e6b06c74e82916b9b11da218d28?item=1"f><strong>Climate Risk Viewer</strong></a> is a tool built by the Forest Service to spacially identify climate-related risks. Our Streamlit-based application is an innovative take on the Climate Risk Viewer that maps climate risk by identifying climate change related news articles by geographic location. In the application, a heatmap shows the quantity of climate change related articles with a negative sentiment. This tool allows users to view climate-related disasters and vulnerabilities using real-time news data.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/annieco29/wid_climate_change_datathon"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://mappingclimatechangenewsdata.streamlit.app">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/annieco29/wid_climate_change_datathon/issues">Request Feature</a>
   </p>
 </div>
 
@@ -64,13 +57,7 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -82,84 +69,75 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+<br />
+<div align="center">
+  <a href="https://github.com/annieco29/wid_climate_change_datathon">
+    <img src="climate_news_sentiment_app_photo.png" alt="Logo" width="480" height="240">
+  </a>
+  
+<!--
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+-->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## Get started guide
 
-### Built With
+#### Clone this repository on your local computer
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+```
+git clone https://github.com/annieco/wid_climate_change_datathon
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+#### Download and Install Anaconda Python 3.7
 
+https://www.anaconda.com/distribution/
 
+#### Change to project folder
 
-<!-- GETTING STARTED -->
-## Getting Started
+```
+cd wid_climate_change_datathon
+```
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+#### Create the project environment
 
-### Prerequisites
+```
+conda env create
+```
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+wait for the environment to create.
 
-### Installation
+#### Activate the environment (Mac/Linux)
+```
+conda activate wid_datathon_2023
+```
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+#### Activate the environment (Windows)
+```
+conda activate wid_datathon_2023
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Check that your prompt changed to
 
+```
+(wid_datathon_2023) $
+```
 
+#### Launch Jupyter Notebook to look through web scraping and location matching notebooks
 
-<!-- USAGE EXAMPLES -->
-## Usage
+```
+jupyter notebook
+```
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+#### Run the streamlit app
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+```
+streamlit run app.py
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+You are good to go! Enjoy!
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -195,9 +173,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/annieco29/wid_climate_change_datathon](https://github.com/annieco29/wid_climate_change_datathon)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,9 +182,12 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [BBC Climate and Science RSS Feed](https://feeds.bbci.co.uk/news/science_and_environment/rss.xml?edition=uk)
+* [NASA Earth Observatory RSS Feed](https://earthobservatory.nasa.gov/feeds/earth-observatory.rss)
+* [waybackpack](https://github.com/jsvine/waybackpack)
+* [Hugging Face](https://huggingface.co/)
+* [Cardiff NLP Twitter roBERTa Base Sentiment](https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest)
+* [Streamlit](https://steamlit.io)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
