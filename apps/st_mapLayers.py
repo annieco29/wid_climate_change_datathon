@@ -10,9 +10,6 @@ from folium.plugins import MarkerCluster
 import branca
 
 def app():
-    # LOGO_IMAGE_IBM = "apps/ibm.png"
-    # LOGO_IMAGE_U_OF_F = "apps/u_of_f.svg.png"
-    # LOGO_IMAGE_BRIGHTER = "apps/brighter_potential_logo.png"
 
     st.markdown(
         """
@@ -40,24 +37,9 @@ def app():
         unsafe_allow_html=True
     )
 
-    # st.markdown(
-    #     f"""
-    #
-    #             <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE_IBM, "rb").read()).decode()}" width="100x`" height="40" style="border:20px;margin:0px" />
-    #             <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE_U_OF_F, "rb").read()).decode()}" width="200" height="40" style="border:20px;margin:0px"/>
-    #             &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-    #             &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-    #
-    #             <img class="logo" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE_BRIGHTER, "rb").read()).decode()}" width="100" height="100" />
-    #
-    #
-    #         """,
-    #     unsafe_allow_html=True
-    # )
-
     #title
     st.markdown('---')
-    st.title("Visualizing Climate Change News on a Map")
+    st.title("Mapping Climate Change News Sentiment")
 
     st.sidebar.header('Choose month to view:')
     # Declare zipcode list
@@ -79,12 +61,12 @@ def app():
         key='CALIFORNIA'
     )
 
-    # st.markdown("""
-    # * Renewables currently account for roughly only 4% of energy production in Florida.
-    # * Stakeholders need to know how solar energy sources can supplement the power grid.
-    # * The map below shows the percentage of energy demand that could have been produced by rooftop solar energy.
-    # * This projection for 2019 is based on predictive modeling that predicts the rooftop solar energy potential and the energy demand based on the weather.
-    # """)
+    st.markdown("""
+    * The [Climate Risk Viewer](https://storymaps.arcgis.com/collections/87744e6b06c74e82916b9b11da218d28?item=1) is a tool built by the Forest Service to spacially identify climate-related risks.
+    * This Streamlit-based application is a new take that maps climate risk based on climate change related news articles by location.
+    * A heatmap shows the quantity of climate change related articles with a negative sentiment.
+    * The articles were pulled via webscraping from BBC Climate news and NASA Earth Observatory and represent news from 2010-present.
+    """)
 
     # area_stats = pd.read_csv('data/RPMSZips.csv', dtype={'zip':str})
     area_stats = pd.read_csv('data/bbc_and_nasa_negative_article_counts_by_state.csv', dtype={'zips':str})
