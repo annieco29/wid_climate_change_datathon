@@ -188,8 +188,8 @@ Project Link: [https://github.com/annieco29/wid_climate_change_datathon](https:/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
+* [BBC Climate and Science RSS Feed](https://feeds.bbci.co.uk/news/science_and_environment/rss.xml?edition=uk)
+* [Streamlit](https://steamlit.io)
 * []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
