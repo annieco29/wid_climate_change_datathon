@@ -60,17 +60,25 @@ def app():
     st.markdown('---')
     st.title("Visualizing Climate Change News on a Map")
 
-    # st.sidebar.header('Choose month to view:')
-    # # Declare zipcode list
-    # month = ['January','February','March','April','May','June','July',
-    #          'August','September','October','November','December']
+    st.sidebar.header('Choose month to view:')
+    # Declare zipcode list
+    state = ["ALABAMA", "ALASKA", "ARIZONA", "ARKANSAS", "CALIFORNIA",
+    "COLORADO", "CONNECTICUT", "DELAWARE", "FLORIDA", "GEORGIA",
+    "HAWAII", "IDAHO", "ILLINOIS", "INDIANA", "IOWA",
+    "KANSAS", "KENTUCKY", "LOUISIANA", "MAINE", "MARYLAND",
+    "MASSACHUSETTS", "MICHIGAN", "MINNESOTA", "MISSISSIPPI", "MISSOURI",
+    "MONTANA", "NEBRASKA", "NEVADA", "NEW HAMPSHIRE", "NEW JERSEY",
+    "NEW MEXICO", "NEW YORK", "NORTH CAROLINA", "NORTH DAKOTA", "OHIO",
+    "OKLAHOMA", "OREGON", "PENNSYLVANIA", "RHODE ISLAND", "SOUTH CAROLINA",
+    "SOUTH DAKOTA", "TENNESSEE", "TEXAS", "UTAH", "VERMONT",
+    "VIRGINIA", "WASHINGTON", "WEST VIRGINIA", "WISCONSIN", "WYOMING"]
 
-    # # Put client and date options in the sidebar
-    # selected_month = st.sidebar.selectbox(
-    #     'Choose month:',
-    #     month,
-    #     key='month'
-    # )
+    # Put client and date options in the sidebar
+    selected_state = st.sidebar.selectbox(
+        'Choose state:',
+        state,
+        key='state'
+    )
 
     # st.markdown("""
     # * Renewables currently account for roughly only 4% of energy production in Florida.
@@ -80,8 +88,11 @@ def app():
     # """)
 
     # area_stats = pd.read_csv('data/RPMSZips.csv', dtype={'zip':str})
-    area_stats = pd.read_csv('data/df_article_counts_by_state.csv', dtype={'zips':str})
+    area_stats = pd.read_csv('data/bbc_and_nasa_negative_article_counts_by_state.csv', dtype={'zips':str})
     area_stats['state_name'] = area_stats['state_name'].str.upper()
+
+    articles = pd.read_csv('data/bbc_and_nasa_articles_loc_coor_sent.csv')
+    articles['state_name'] = articles['state_name'].str.upper()
 
     # #get name of month for sunburst chart
     # area_stats['date_time'] = pd.to_datetime(area_stats['date_time'])
@@ -89,13 +100,6 @@ def app():
     # area_stats_sub = area_stats[['zipcode','month','solar_prod_mwh','real_pred_demand_mwh','percentage_demand_covered']]
     # df_groupby_month = area_stats_sub.groupby(['zipcode','month']).mean()
     # df_groupby_month = df_groupby_month.reset_index()
-
-    # # create a dataframe that gets masked based on a daily date selector
-    # #print(area_stats.dtypes)
-    # monthly_mask = (df_groupby_month['month'] == selected_month)
-    # df_monthly_masked = df_groupby_month.loc[monthly_mask]
-    # # st.write('df_monthly_masked shape = ')
-    # # st.write(df_monthly_masked.shape)
 
     # # Display dataframe on website via st.dataframe or st.write methods
     # st.write("==  scrollable dataframe after the end user has uploaded her time series file:")
@@ -164,7 +168,17 @@ def app():
     # choropleth.geojson.add_child(
     #     folium.features.GeoJsonTooltip(['zipcode'], style=style_function, labels=False))
 
+    # create a dataframe that gets masked based on the state selected
+    #print(area_stats.dtypes)
+
     # create a layer control
     folium.LayerControl().add_to(mymap)
 
     folium_static(mymap, width=750, height=850)
+
+    st.markdown('---')
+
+    state_mask = (articles['state_name'] == selected_state)
+    df_state_masked = articles[['city','state_name','Article Title','Article Link','Article Description','Published']].loc[state_mask]
+    st.write('Articles Assoicated with State = ')
+    st.write(df_state_masked)
