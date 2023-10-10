@@ -66,6 +66,7 @@ def app():
     * This Streamlit-based application is a new take that maps climate risk based on climate change related news articles by location.
     * A heatmap shows the quantity of climate change related articles with a negative sentiment.
     * The articles were pulled via webscraping from BBC Climate news and NASA Earth Observatory and represent news from 2010-present.
+    * The drop-down menu on the side bar allows you to view article titles and links in the data sample pertaining to a specific state.
     """)
 
     # area_stats = pd.read_csv('data/RPMSZips.csv', dtype={'zip':str})
@@ -75,20 +76,8 @@ def app():
     articles = pd.read_csv('data/bbc_and_nasa_articles_loc_coor_sent.csv')
     articles['state_name'] = articles['state_name'].str.upper()
 
-    # #get name of month for sunburst chart
-    # area_stats['date_time'] = pd.to_datetime(area_stats['date_time'])
-    # area_stats['month'] = area_stats['date_time'].dt.strftime("%B")
-    # area_stats_sub = area_stats[['zipcode','month','solar_prod_mwh','real_pred_demand_mwh','percentage_demand_covered']]
-    # df_groupby_month = area_stats_sub.groupby(['zipcode','month']).mean()
-    # df_groupby_month = df_groupby_month.reset_index()
-
-    # # Display dataframe on website via st.dataframe or st.write methods
-    # st.write("==  scrollable dataframe after the end user has uploaded her time series file:")
-    # st.dataframe(df.style.highlight_max(axis=0))
-
     st.markdown('---')
     st.header('Heat map of climate change news sentiment by US city')
-    # view neighborhood, city by income, different groups, stats
 
     # reading in the polygon shapefile
     us_states = gpd.read_file(r"data/States_shapefile-shp/States_shapefile.shp")
@@ -101,11 +90,6 @@ def app():
 
     us_states_merged = pd.merge(us_states, area_stats, left_on='State_Name', right_on='state_name')
     print(us_states_merged.head())
-    # us_states_merged['percentage_demand_covered'] = florida_zips_merged['percentage_demand_covered'] * 100
-
-    #st.subheader(f'{demo} population in %')
-
-    # view_real_estate = st.checkbox('View Industrial Locations')
 
     choropleth = folium.Choropleth(
      geo_data=us_states_merged,
@@ -119,29 +103,9 @@ def app():
      smooth_factor=0
     ).add_to(mymap)
 
-    # # add points for student locations
-    # if view_real_estate:
-    #     industrial_locations = pd.read_csv('apps/florida_industrial_lat_long.csv')
-
-    #     #industrial_owners = pd.read_csv('apps/industrial_solar.csv')
-    #     lat = industrial_locations['lat'].tolist()
-    #     lon = industrial_locations['long'].tolist()
-    #     name = industrial_locations['reported_owner'].tolist()
-    #     pred = industrial_locations['solar_prod_mw'].tolist()
-
-    #     #st.write(industrial_locations.columns)
-
-    #     for lt,ln,nm,pr in zip(lat,lon,name,pred):
-    #         test = folium.Html(f'<b>Owner: {nm}<br>Daily Solar Production: {pr}</b>', script=True)  # i'm assuming this bit runs fine
-    #         iframe = branca.element.IFrame(html=test, width=200, height=90)
-    #         popup = folium.Popup(iframe, parse_html=True)
-    #         folium.Marker(location=[lt, ln], radius=6, color='grey', fill_color='yellow', popup=popup).add_to(mymap)
-
-    # add labels indicating the name of the community
     style_function = "font-size: 15px; font-weight: bold"
     choropleth.geojson.add_child(
         folium.features.GeoJsonTooltip(['State_Name'], style=style_function, labels=False))
-
 
     # create a layer control
     folium.LayerControl().add_to(mymap)
