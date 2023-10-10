@@ -189,8 +189,11 @@ Project Link: [https://github.com/annieco29/wid_climate_change_datathon](https:/
 ## Acknowledgments
 
 * [BBC Climate and Science RSS Feed](https://feeds.bbci.co.uk/news/science_and_environment/rss.xml?edition=uk)
+* [NASA Earth Observatory RSS Feed](https://earthobservatory.nasa.gov/feeds/earth-observatory.rss)
+* [waybackpack](https://github.com/jsvine/waybackpack)
+* [Hugging Face](https://huggingface.co/)
+* [Cardiff NLP Twitter roBERTa Base Sentiment](https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest)
 * [Streamlit](https://steamlit.io)
-* []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
