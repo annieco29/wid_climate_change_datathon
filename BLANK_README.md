@@ -88,54 +88,62 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### Prerequisites
+## Get started guide
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+#### Clone this repository on your local computer
 
-### Installation
+```
+git clone https://github.com/annieco/wid_climate_change_datathon
+```
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/annieco29/wid_climate_change_datathon.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+#### Download and Install Anaconda Python 3.7
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+https://www.anaconda.com/distribution/
 
+#### Change to project folder
 
+```
+cd wid_climate_change_datathon
+```
 
-<!-- USAGE EXAMPLES -->
-## Usage
+#### Create the project environment
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+```
+conda env create
+```
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+wait for the environment to create.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+#### Activate the environment (Mac/Linux)
+```
+conda activate wid_datathon_2023
+```
 
+#### Activate the environment (Windows)
+```
+conda activate wid_datathon_2023
+```
 
+Check that your prompt changed to
 
-<!-- ROADMAP -->
-## Roadmap
+```
+(wid_datathon_2023) $
+```
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+#### Launch Jupyter Notebook to look through web scraping and location matching notebooks
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+```
+jupyter notebook
+```
+
+#### Run the streamlit app
+
+```
+streamlit run app.py
+```
+
+You are good to go! Enjoy!
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -171,9 +179,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/github_username/repo_name](https://github.com/annieco29/wid_climate_change_datathon)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
