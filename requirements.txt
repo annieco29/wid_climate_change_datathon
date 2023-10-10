@@ -1,9 +1,8 @@
-branca @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_22lxwrtgv0/croot/branca_1675157626247/work
-folium @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a79olnatv_/croot/folium_1675353410898/work
-geopandas @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_1d130uoh2n/croot/geopandas_1675672032301/work
-numpy @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_b1_7dulbi4/croot/numpy_and_numpy_base_1695830449184/work/dist/numpy-1.26.0-cp39-cp39-macosx_10_9_x86_64.whl#sha256=905f232586ea5c49272cc5798a993a2245af195c75982c254c867dff528ad9dc
+branca==0.6.0
+folium==0.14.0
+geopandas==0.12.2
+numpy==1.26.0
 pandas==2.1.1
-plotly @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_b7601a7c-071f-4424-ad46-f00f32c1766ccwgx0ywh/croots/recipe/plotly_1658160061089/work
-plotly-express==0.4.1
+plotly==5.9.0
 streamlit==1.27.2
 streamlit-folium==0.15.0
