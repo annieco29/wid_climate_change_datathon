@@ -77,7 +77,7 @@
 ## About The Project
 <br />
 <div align="center">
-  <a href="https://github.com/annieco/wid_climate_change_datathon">
+  <a href="https://github.com/annieco29/wid_climate_change_datathon">
     <img src="climate_news_sentiment_app_photo.png" alt="Logo" width="480" height="240">
   </a>
   
