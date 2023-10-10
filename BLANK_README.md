@@ -72,7 +72,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/annieco29/wid_climate_change_datathon">
-    <img src="image/streamlit_climate_news_sentiment_app.png" alt="Logo" width="960" height="480">
+    <img src="images/streamlit_climate_change_news_sentiment_app.png" alt="Logo" width="960" height="650">
   </a>
   
 <!--
