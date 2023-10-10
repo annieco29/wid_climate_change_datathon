@@ -77,7 +77,7 @@ def app():
     selected_state = st.sidebar.selectbox(
         'Choose state:',
         state,
-        key='state'
+        key='CALIFORNIA'
     )
 
     # st.markdown("""
@@ -179,6 +179,6 @@ def app():
     st.markdown('---')
 
     state_mask = (articles['state_name'] == selected_state)
-    df_state_masked = articles[['city','state_name','Article Title','Article Link','Article Description','Published']].loc[state_mask]
+    df_state_masked = articles[['city','state_name','Article Title','Article Link','Article Description','Published','roBERTa Negative Score']].loc[state_mask]
     st.write('Articles Assoicated with State = ')
     st.write(df_state_masked)
