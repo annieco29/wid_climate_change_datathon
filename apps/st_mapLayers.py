@@ -117,8 +117,6 @@ def app():
 
     mymap = folium.Map(location=[x_map, y_map], zoom_start=4,tiles=None)
     folium.TileLayer('CartoDB positron',name="Light Map",control=False).add_to(mymap)
-    #folium_static(mymap)
-
 
     us_states_merged = pd.merge(us_states, area_stats, left_on='State_Name', right_on='state_name')
     print(us_states_merged.head())
@@ -140,11 +138,6 @@ def app():
      smooth_factor=0
     ).add_to(mymap)
 
-    # # add points for industrial real estate sites greater than 750,000 sqft
-    # cluster = MarkerCluster().add_to(mymap)
-    # style_function = "font-size: 15px; font-weight: bold"
-    # #folium.Marker(location=[41.980250,-87.675000], tooltip = "<h3>RPMS</h3>", popup = 'RPMS', style=style_function).add_to(cluster)
-
     # # add points for student locations
     # if view_real_estate:
     #     industrial_locations = pd.read_csv('apps/florida_industrial_lat_long.csv')
@@ -163,13 +156,11 @@ def app():
     #         popup = folium.Popup(iframe, parse_html=True)
     #         folium.Marker(location=[lt, ln], radius=6, color='grey', fill_color='yellow', popup=popup).add_to(mymap)
 
-    # # add labels indicating the name of the community
-    # style_function = "font-size: 15px; font-weight: bold"
-    # choropleth.geojson.add_child(
-    #     folium.features.GeoJsonTooltip(['zipcode'], style=style_function, labels=False))
+    # add labels indicating the name of the community
+    style_function = "font-size: 15px; font-weight: bold"
+    choropleth.geojson.add_child(
+        folium.features.GeoJsonTooltip(['State_Name'], style=style_function, labels=False))
 
-    # create a dataframe that gets masked based on the state selected
-    #print(area_stats.dtypes)
 
     # create a layer control
     folium.LayerControl().add_to(mymap)
