@@ -21,11 +21,13 @@
 
 
 <!-- PROJECT LOGO -->
+<!--
 <br />
 <div align="center">
   <a href="https://github.com/annieco/wid_climate_change_datathon">
     <img src="climate_news_sentiment_app_photo.png" alt="Logo" width="240" height="120">
   </a>
+-->
 
 <h3 align="center">Mapping Climate Change News Sentiment</h3>
 
@@ -35,7 +37,7 @@
     <a href="https://github.com/annieco29/wid_climate_change_datathon"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="mappingclimatechangenewsdata.streamlit.app">View Demo</a>
+    <a href="https://mappingclimatechangenewsdata.streamlit.app">View Demo</a>
     ·
     <a href="https://github.com/annieco29/wid_climate_change_datathon/issues">Request Feature</a>
   </p>
